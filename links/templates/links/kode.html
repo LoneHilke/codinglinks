@@ -1,0 +1,29 @@
+{% extends 'links/base.html' %}
+
+{% block content %}
+<br>
+<h1><font color="red">Små kode stykker</font></h1>
+<br>
+<h3>Nedenfor kommer der nogle eksempler på små hurtige kode stykker.<br>
+    Det er screenshots jeg har taget, og det er ikke helt til begynder,<br>
+    da man skal have en baggrundsviden, for at kunne lege videre med dem</h3>
+    <h5><font color=grey>Billedet kan forstørres ved at holde musen på det, højre klikke på det og vælge forstør billeder</font></h5>
+    
+    <div class="container mt-3">
+        <div class="row justify-content-center mt-5">
+        <ul class="list-group list-group-horizontal">
+            
+        {% for sma in small %}
+        <font color=green>
+          <li class="list-group-item">{{sma.name}}</li>
+          <img class="rounded" src="{{ sma.foto.url }}" width="100" height="150"/>
+        </font>
+        {% endfor %}
+           
+        </ul>
+      </div>
+    </div>
+     
+    
+    
+{% endblock %}

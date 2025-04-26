@@ -1,0 +1,26 @@
+{% extends 'links/base.html' %}
+
+{% block content %}
+<h1>Deploy</h1>
+<h3>Deploy er en måde at få sin side lagt ud på nettet.<br>
+    Der er flere sider, hvor man kan gøre det, men de koster alle noget.<br>
+    Skriver de at det er gratis, er det kun for en kort periode.</h3>
+    <h3>Her er en liste over nogle sider, hvor det er muligt, men der er mange flere:</h3>
+    
+    <div class="container mt-3">
+        <div class="row justify-content-center mt-5">
+        <ul class="list-group list-group-horizontal">
+            
+        {% for lin in link %}
+        <font color=green>
+          <li class="list-group-item"><a href= {{lin.link}} target="_blank"class="nav-link active py-3 border-bottom"> {{lin.name}} </a></li>
+        </font>
+        {% endfor %}
+           
+        </ul>
+      </div>
+    </div>
+     
+    
+    
+{% endblock %}
