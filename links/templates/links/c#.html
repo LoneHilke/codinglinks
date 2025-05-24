@@ -1,0 +1,91 @@
+{% extends 'links/base.html' %}
+
+{% block content %}
+
+<h3>C#</h3>
+      <h1><i><b><u>C# er et andet kodningssprog</u></b></i></h1>
+              <h4>Du kan klikke på appnavnet for mere info om appen,<br> følgende apps er beskrevet neden under</h4>
+
+      <h4>  C# </h4>
+      <h4>  SoloLearn</h4>
+      <h4>  C# Shell .NET IDE</h4>
+              <h4>  - hvilken playliste der er.</h4>
+      <h4>Det er vigtigt at udfylde nedenstående så udførligt som muligt, og sende det til mig</h4>
+
+    <div class="container mt-3">
+      <h3>Mere info:</h3>
+      <p></p>
+
+      <button type="button" class="btn btn-primary" id="toastbtn">C#</button>
+
+      <div class="toast">
+        <div class="toast-header">
+          <strong class="me-auto">Info om app</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+          <p><font color=green>Appen er meget beskrivende indenfor de vigtigste begreber.<br>Der kan forekomme køb i appen, hvis man vil have fuldudbytte af den<br>
+          <b>men den er ellers lige til at tilgå, hvis man er god til engelsk</b></font></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    document.getElementById("toastbtn").onclick = function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+      })
+      toastList.forEach(toast => toast.show()) 
+    }
+    </script>
+
+    <button type="button" class="btn btn-primary" id="toast1btn1">SoloLearn</button>
+
+      <div class="toast">
+        <div class="toast-header">
+          <strong class="me-auto">Info om app</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+          <p><font color=green>Appen er meget beskrivende indenfor de vigtigste begreber.<br>Der kan forekomme køb i appen, hvis man vil have fuldudbytte af den<br>
+          <b>men den er ellers lige til at tilgå, hvis man er god til engelsk</b></font></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    document.getElementById("toastbtn1").onclick = function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+      })
+      toastList.forEach(toast => toast.show()) 
+    }
+    </script>
+
+    <button type="button" class="btn btn-primary" id="toastbtn2">C# Shell .NET IDE</button>
+
+      <div class="toast">
+        <div class="toast-header">
+          <strong class="me-auto">Info om app</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+          <p><font color=green>Appen er en consol til at skrive kode i.<br>Den er god at downloade på telefon, så man kan kode hvor man er<br>
+          <b>Udover denne app, kan man også skrive kode i Replit, som kan downloades og Visual Studio</b></font></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    document.getElementById("toastbtn2").onclick = function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+      })
+      toastList.forEach(toast => toast.show()) 
+    }
+    </script>
+
+    {% endblock content %}

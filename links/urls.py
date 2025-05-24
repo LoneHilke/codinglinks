@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf import settings
-from .views import Index, PythonView, DjangoView, Deploy, Terminals, Info, SmallView, Microsoft
+from .views import Index, PythonView, DjangoView, Deploy, Terminals, Info, SmallView, Microsoft,C
 from django.views import View
 from django.conf.urls.static import static
 
@@ -13,4 +13,5 @@ urlpatterns = [
   path('info/', Info.as_view(), name='info'),
   path('small/', SmallView.as_view(), name='small'),
   path('m365/', Microsoft.as_view(), name='m365'),
+  path('C#/', C.as_view(), name='C#'),
   ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

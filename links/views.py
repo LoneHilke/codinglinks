@@ -50,3 +50,7 @@ class SmallView(View):
 class Microsoft(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'links/m365.html')
+    
+class C(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'links/c#.html')
